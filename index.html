@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080c14">
+    <meta name="description" content="FRIDAY — trợ lý AI cá nhân, nhanh nhạy và luôn sẵn sàng hỗ trợ.">
+    <title>FRIDAY — AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="FRIDAY trang chủ">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>FRIDAY<span class="brand-period">.</span></span>
+        </a>
+        <button class="new-chat" id="new-chat" type="button">
+          <span class="plus">+</span> Cuộc trò chuyện mới
+          <kbd>⌘ K</kbd>
+        </button>
+        <div class="sidebar-label">TRỢ LÝ CỦA BẠN</div>
+        <div class="assistant-card">
+          <div class="mini-orb"><i></i></div>
+          <div>
+            <strong>FRIDAY AI</strong>
+            <span>Luôn sẵn sàng hỗ trợ</span>
+          </div>
+          <span class="online-dot"></span>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="powered">ĐƯỢC TĂNG SỨC BỞI</div>
+          <div class="model-label"><span class="model-spark">✳</span> Qwen3 · Hugging Face</div>
+          <div class="free-note">Model mã nguồn mở · Inference API</div>
+          <p>Hạn mức miễn phí tùy chính sách Hugging Face và nhà cung cấp inference.</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark"><span></span><span></span><span></span></span> FRIDAY<span class="brand-period">.</span></div>
+          <div class="topbar-right"><span class="status-pill" id="service-status"><span class="online-dot" id="service-status-indicator"></span><span id="service-status-text">Đang kiểm tra</span></span></div>
+        </header>
+
+        <section class="conversation" id="conversation" aria-live="polite">
+          <div class="welcome" id="welcome">
+            <div class="hero-orb"><div class="orb-core"></div><span class="orb-ring ring-one"></span><span class="orb-ring ring-two"></span><span class="orb-glint"></span></div>
+            <div class="eyebrow"><span></span> TRỢ LÝ AI CỦA BẠN</div>
+            <h1>Xin chào, tôi là <span>FRIDAY</span></h1>
+            <p class="welcome-copy">Trợ lý của bạn, luôn ở đây. Hôm nay mình có thể giúp gì cho bạn?</p>
+            <div class="suggestions">
+              <button class="suggestion" data-prompt="Giải thích trí tuệ nhân tạo thật đơn giản, kèm một ví dụ gần gũi."><span class="suggestion-icon violet">✳</span><span><strong>Giải thích điều phức tạp</strong><small>Biến ý tưởng khó thành dễ hiểu</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Gợi ý cho tôi một kế hoạch làm việc hiệu quả trong ngày hôm nay."><span class="suggestion-icon blue">◷</span><span><strong>Lên kế hoạch hôm nay</strong><small>Sắp xếp công việc gọn gàng hơn</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Viết giúp tôi một email lịch sự để xin dời lịch họp sang ngày mai."><span class="suggestion-icon orange">✎</span><span><strong>Viết cùng tôi</strong><small>Email, nội dung và nhiều hơn nữa</small></span><span class="suggestion-arrow">↗</span></button>
+              <button class="suggestion" data-prompt="Nêu một ý tưởng sáng tạo cho cuối tuần này, phù hợp với ngân sách tiết kiệm."><span class="suggestion-icon green">⌁</span><span><strong>Khơi nguồn ý tưởng</strong><small>Bắt đầu với một tia cảm hứng</small></span><span class="suggestion-arrow">↗</span></button>
+            </div>
+          </div>
+          <div class="messages" id="messages"></div>
+        </section>
+
+        <div class="composer-wrap">
+          <form class="composer" id="chat-form">
+            <textarea id="message-input" rows="1" maxlength="12000" placeholder="Nhắn tin cho FRIDAY..." aria-label="Tin nhắn cho FRIDAY"></textarea>
+            <div class="composer-footer">
+              <div class="composer-hint"><span class="sparkle">✦</span> FRIDAY · Qwen3 <span class="hint-divider">·</span> Enter để gửi</div>
+              <button class="send-button" id="send-button" type="submit" aria-label="Gửi tin nhắn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+            </div>
+          </form>
+          <p class="disclaimer">FRIDAY có thể mắc lỗi. Hãy kiểm tra lại những thông tin quan trọng.</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
